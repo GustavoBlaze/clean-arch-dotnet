@@ -14,10 +14,7 @@ namespace Blog.Application
 
     public void AddPost(string title, string content)
     {
-      long newPostId = DateTime.Now.Ticks;
-
-      Post newPost = new Post(newPostId, title, content);
-      postManager.insert(newPost);
+      postManager.insert(title, content);
     }
 
     public void DeletePost(long postId)

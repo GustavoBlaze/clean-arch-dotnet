@@ -5,7 +5,7 @@ namespace Blog.Interfaces
   public abstract class Manager<T>
   {
 
-    public abstract void insert(T itemToInsert);
+    public abstract void insert(string title, string content);
 
     public abstract bool destroy(long itemId);
 

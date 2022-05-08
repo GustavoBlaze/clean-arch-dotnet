@@ -13,8 +13,12 @@ namespace Blog.Interfaces
       posts = new List<Post>();
     }
 
-    public override void insert(Post post)
+    public override void insert(string title, string content)
     {
+      long newPostId = DateTime.Now.Ticks;
+
+      Post post = new Post(newPostId, title, content);
+
       this.posts.Add(post);
     }
 
